@@ -1,5 +1,25 @@
 
 
+# This is a question I'm afraid I'm just not going to get the solution to.
+# There is something fundamentally wrong with the way that I am adding the tiles to the grid.
+# I can see that the order in which the o's are added makes a difference since I have tried different arrangements
+# and gotten different answer; however, without properly understanding the logic behind the question I don't think
+# I can solve it in time.
+
+# Of course, I could always generate every possible grid and pick the highest valued arrangement, but I think
+# an exponential time complexity won't cut it in the alloted 4 minutes.
+
+# My final score was 50 for the qualifications, it could have been more if I had known that the final part of question 3
+# only allowed 1 submission. I am happy with my performance, all things considered, and hope I have the opportunity to
+# participate in the next round.
+
+
+
+
+
+
+
+
 
 ### If I ever figure out what's wrong with this question,
 ### I can optimize by using the formula that a positions are diagonal iff:
@@ -148,10 +168,12 @@ def stylyzeB(grid):
     pl = True
     cr = True
 
-    addCircle(grid)
+    # addCircle(grid)
 
     while pl or cr:
+        addCircle(grid)
         pl = addPlus(grid)
+        addCircle(grid)
         cr = addCross(grid)
 
     addCircle(grid)
@@ -186,11 +208,9 @@ for i in xrange(1, t + 1):
         place = raw_input().split()
         grid[int(place[1]) - 1][int(place[2]) - 1] = place[0]
 
-    # print grid
     n1 = stylyzeA([row[:] for row in grid])
     n2 = stylyzeB([row[:] for row in grid])
 
-    # print n
     output = ""
     style = 0
     num = 0

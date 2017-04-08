@@ -4,6 +4,15 @@ import java.util.ArrayList;
 import java.lang.Math;
 
 
+/*
+
+This was my favorite solution, it took breaking down the problem into what was really important and minimizing the
+amount of information needed to be processed to answer it in time. I'm happy that I have been implementing algorithms
+such as a min heap, otherwise if I had to implement this from scratch, I don't think I would have finished.
+
+*/
+
+
 class HasKey{
     private Integer key;
     int l;
